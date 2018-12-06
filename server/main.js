@@ -10,7 +10,7 @@ const DispositiveCtrl = require('../controllers/signalECG')
 var messages =[{
   id: 1,
   text:"Hola ",
-  author:"Mundo"
+  author:"Todos"
 }];
 
 
