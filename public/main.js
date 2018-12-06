@@ -1,6 +1,6 @@
 //var socket = io.connect('http://localhost:8081',{'forceNew':true});
-var socket = io.connect('http://192.168.0.11:8081',{'forceNew':true});
-//var socket = io.connect('http://10.150.13.18:8081',{'forceNew':true});
+//var socket = io.connect('http://192.168.0.11:8081',{'forceNew':true});
+var socket = io.connect('http://209.182.218.174:8081',{'forceNew':true});
 
 socket.on('messages',function(data){
   console.log(data);
