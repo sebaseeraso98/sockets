@@ -1,8 +1,8 @@
 //var socket = io.connect('http://localhost:8081',{'forceNew':true});
-//var socket = io.connect('http://192.168.0.11:8081',{'forceNew':true});
+var socket = io.connect('http://192.168.1.8:8081',{'forceNew':true});
 //var socket = io.connect('http://10.254.193.112:8081',{'forceNew':true});
 //var socket = io.connect('http://10.150.13.18:8081',{'forceNew':true});
-var socket = io.connect('http://209.182.218.174:8081',{'forceNew':true});
+//var socket = io.connect('http://209.182.218.174:8081',{'forceNew':true});
 
 var mensajes=[ 'Leer Valor ADC' ];
 

@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use("/NewPage",express.static(__dirname + "/public/NewPage"));
-app.use("/Grafica",express.static(__dirname + "/public/Graficas"));
+app.use('/NewPage2',express.static(__dirname + "/public/NewPage2"));
 app.get('/',function (req,res){
 
   res.status(200).send("Hola");
