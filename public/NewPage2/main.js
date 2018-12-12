@@ -1,4 +1,5 @@
-var socket = io.connect('http://192.168.1.8:8081',{'forceNew':true});
+//var socket = io.connect('http://192.168.1.8:8081',{'forceNew':true});
+var socket = io.connect('http://209.182.218.174:8081',{'forceNew':true});
 
 var decimal_data = [];
 for (var x = 0; x <= 100; x += 1) {
