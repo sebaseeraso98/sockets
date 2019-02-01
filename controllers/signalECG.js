@@ -33,7 +33,7 @@ function updatedato(dispositivo,next){
       ECG.findOne({id_Number:iddispositivo},(err,dispositivo)=>{
         if(err)return next ({ message:`Error al editar la base de datos ${err}`})
 
-        dispositivo.datos.push(dato)
+        //dispositivo.datos.push(dato)
         dispositivo.datos.push.apply(dispositivo.datos,dato)
         dispositivo.temp.push.apply(dispositivo.temp,temp)
         dispositivo.presion.push.apply(dispositivo.presion,presion)
