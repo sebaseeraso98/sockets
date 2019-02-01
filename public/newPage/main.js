@@ -1,10 +1,9 @@
 //var socket = io.connect('http://localhost:8081',{'forceNew':true});
-//var socket = io.connect('http://192.168.1.8:8081',{'forceNew':true});
-//var socket = io.connect('http://10.254.204.174:8081',{'forceNew':true});
-//var socket = io.connect('http://10.150.13.18:8081',{'forceNew':true});
-var socket = io.connect('http://209.182.218.174:8081',{'forceNew':true});
+//var socket = io.connect('http://192.168.1.5:8081',{'forceNew':true});
+var socket = io.connect('http://10.254.203.130:8081',{'forceNew':true});
 
-var mensajes=[ 'Leer Valor ADC' ];
+
+var mensajes=[ 'Que comience el chat!..' ];
 
 socket.on('MCUEventClient',function(data){
  console.log(data);
@@ -17,7 +16,7 @@ socket.on('signalclient',function(data){
   mensajes.push(data)
   render(mensajes);
 });
-socket.on('Datonuevo',function(data){
+socket.on('Datoañadido',function(data){
   console.log(data);
   var msg = `Dato: ${data.datos[data.datos.length -1 ] } Fecha: ${data.fecha[data.fecha.length -1 ] }`
   mensajes.push(msg)

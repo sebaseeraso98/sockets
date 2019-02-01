@@ -9,8 +9,8 @@ const DispositiveCtrl = require('../controllers/signalECG')
 
 var messages =[{
   id: 1,
-  text:"Hola ",
-  author:"Todos"
+  text:"Hola soy el mapa",
+  author:"Patricia"
 }];
 
 
@@ -18,11 +18,11 @@ var messages =[{
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(express.static('public'));
-app.use("/NewPage",express.static(__dirname + "/public/NewPage"));
-app.use('/NewPage2',express.static(__dirname + "/public/NewPage2"));
+app.use("/newPage",express.static(__dirname + "/public/newPage"));
+app.use("/newPage2",express.static(__dirname + "/public/newPage2"));
 app.get('/',function (req,res){
 
-  res.status(200).send("Hola");
+  res.status(200).send("Hola gays");
 });
 
 app.use('/api',api)
@@ -56,23 +56,25 @@ socket.on('new-message2',function(data) {
 
 }); // evento creado
 
-     socket.on('MCUEvent',function(data) {
-     console.log(data);
-     socket.broadcast.emit('MCUEventClient',data);
+
+socket.on('MCUEvent',function(data) {
+     //console.log(data);
+     //io.sockets.emit('MCUEventClient',data);
+    socket.broadcast.emit('MCUEventClient',data);
 });
 
 socket.on('SignalEvent',function(dispositivo) {
 
      console.log(dispositivo);
      DispositiveCtrl.deletedato(dispositivo,(newdispositivo)=>{
-     //io.sockets.emit('signalclient',data);
+   //io.sockets.emit('signalclient',data);
      })
 });
 
 socket.on('Basedatos',function(dispositivo) {
-     console.log(dispositivo.data);
+     //console.log(dispositivo);
      DispositiveCtrl.updatedato(dispositivo,(newdispositivo)=>{
-     socket.broadcast.emit('Datonuevo',newdispositivo);
+     socket.broadcast.emit('Datoañadido',newdispositivo);
 
    })
 });
