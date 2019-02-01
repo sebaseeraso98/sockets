@@ -1,7 +1,7 @@
 //var socket = io.connect('http://localhost:8081',{'forceNew':true});
 //var socket = io.connect('http://192.168.1.5:8081',{'forceNew':true});
-var socket = io.connect('http://10.254.203.130:8081',{'forceNew':true});
-
+//var socket = io.connect('http://10.254.203.130:8081',{'forceNew':true});
+var socket = io.connect('209.182.218.174:8081',{'forceNew':true});
 
 var mensajes=[ 'Que comience el chat!..' ];
 
