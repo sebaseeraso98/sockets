@@ -43,8 +43,8 @@ function updatedato(dispositivo,next){
         dispositivo.save(function (err,res){
           if(err) return console.log(`No se pudo ${err}`)
           console.log ('Dato actualizado');
-          //console.log(n)
-          //console.log(dato)
+          console.log(n)
+          console.log(dato)
 
         });
 
