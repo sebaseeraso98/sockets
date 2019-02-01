@@ -34,7 +34,7 @@ function updatedato(dispositivo,next){
         if(err)return next ({ message:`Error al editar la base de datos ${err}`})
 
         //dispositivo.datos.push(dato)
-        dispositivo.datos.push.apply(dispositivo.datos,dato)
+        //dispositivo.datos.push.apply(dispositivo.datos,dato)
         dispositivo.temp.push.apply(dispositivo.temp,temp)
         dispositivo.presion.push.apply(dispositivo.presion,presion)
         var d = new Date(Date.now());
@@ -43,8 +43,8 @@ function updatedato(dispositivo,next){
         dispositivo.save(function (err,res){
           if(err) return console.log(`No se pudo ${err}`)
           console.log ('Dato actualizado');
-          console.log(n)
-          console.log(dato)
+          //console.log(n)
+          //console.log(dato)
 
         });
 
