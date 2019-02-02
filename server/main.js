@@ -3,13 +3,13 @@ var app = express();
 const bodyParser = require('body-parser');
 var server=require('http').Server(app);
 var io=require('socket.io')(server);
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
 const api = require('../routes')
 const DispositiveCtrl = require('../controllers/signalECG')
 
 var messages =[{
   id: 1,
-  text:"Hola soy el mapa",
+  text:"Hola todos",
   author:"Patricia"
 }];
 
@@ -74,9 +74,10 @@ socket.on('SignalEvent',function(dispositivo) {
 socket.on('Basedatos',function(dispositivo) {
      //console.log(dispositivo);
      DispositiveCtrl.updatedato(dispositivo,(newdispositivo)=>{
-     socket.broadcast.emit('Datoañadido',newdispositivo);
+       socket.broadcast.emit('Datoañadido',newdispositivo);
 
    })
+
 });
 
 
